@@ -1,0 +1,108 @@
+
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgb(139, 201, 228);
+
+  }
+  .stepOne{
+    display: flex;
+    min-height: 100vh
+  }
+
+  img {
+
+    position: fixed; /* make sure it stays put so we can see it! */
+    height: 115vh;
+    /* animation: 5s linear 10s forwards fade; */
+    /* animation-play-state: paused;
+    animation-delay: cal(var(--scroll) * -1s); */
+  }
+  
+  .animate{
+    animation: 5s linear forwards zoom;
+  }
+
+  @keyframes zoom {
+    from {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+  
+    to {
+        transform:translateY(40%);
+        scale: 5;
+        opacity: 0
+    }
+  }
+  @keyframes fade {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+  }
+
+  button{
+    z-index: 5;
+    float: right;
+    margin: auto;
+    font-size: 24px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    border-radius: 25px;;
+    background-color: rgb(139, 201, 228);
+    box-shadow: 2px 2px 2px gray;
+    border-color: rgb(139, 201, 228);
+    padding: 0 40px;
+  }
+
+  #cloud1{
+    width: 25em;
+    height: 15em;
+    float: right;
+    top: 20%;
+    opacity: 0;
+  }
+  #cloud2{
+    width: 40em;
+    height: 25em;
+    float:right;
+    left: 60%;
+    opacity: 0;
+  }
+  #cloud3{
+    width: 20em;
+    height: 12em;
+    float: right;
+    left: 30%;
+    opacity: 0;
+  }
+  
+  .cloud_animate{
+    animation: 3s linear forwards clouds;
+    animation-delay: 5s;
+  }
+  @keyframes clouds {
+    from{
+        opacity: 0;
+        transform: translateY(-10%)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(1%)
+    }
+  }
+
+  #hello{
+    width: 60vw;
+    height: 100%;
+    margin: auto;
+    display: none;
+  }
+  .hello_world{
+    margin: auto;
+  }
